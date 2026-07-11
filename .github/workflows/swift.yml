@@ -1,0 +1,36 @@
+name: Swift
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: macos-26
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Select simulator
+      id: simulator
+      run: |
+        UDID=$(xcrun simctl list devices available -j | jq -r '
+          .devices
+          | to_entries
+          | map(select(.key | contains("iOS")))
+          | map(.value[])
+          | map(select(.isAvailable and (.name | startswith("iPhone"))))
+          | .[0].udid
+        ')
+        echo "Selected simulator UDID: $UDID"
+        echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+    - name: Build
+      run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+
+    - name: Run tests
+      run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
