@@ -14,8 +14,3 @@ enum NutritionTrackerSchemaV1: VersionedSchema {
         ]
     }
 }
-
-enum NutritionTrackerMigrationPlan: SchemaMigrationPlan {
-    static var schemas: [any VersionedSchema.Type] { [NutritionTrackerSchemaV1.self] }
-    static var stages: [MigrationStage] { [] }
-}

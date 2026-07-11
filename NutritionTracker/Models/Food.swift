@@ -1,44 +1,6 @@
 import Foundation
 import SwiftData
 
-enum FoodSource: String, Codable {
-    case kassalapp
-    case openFoodFacts
-    case matvaretabellen
-    case userEntered
-}
-
-@Model
-final class FoodGroup {
-    @Attribute(.unique) var code: String   // Matvaretabellen food-group code
-    var name: String
-    var parent: FoodGroup?
-
-    @Relationship(inverse: \FoodGroup.parent)
-    var children: [FoodGroup] = []
-
-    init(code: String, name: String, parent: FoodGroup? = nil) {
-        self.code = code
-        self.name = name
-        self.parent = parent
-    }
-}
-
-@Model
-final class Nutrient {
-    @Attribute(.unique) var code: String     // matches source API codes, e.g. "energi_kcal", "protein"
-    var displayName: String
-    var unit: MeasurementUnit                 // .kilocalorie, .gram, .milligram, .microgram, etc.
-    var isCore: Bool                          // kcal/protein/fat/carbs shown prominently in UI
-
-    init(code: String, displayName: String, unit: MeasurementUnit, isCore: Bool = false) {
-        self.code = code
-        self.displayName = displayName
-        self.unit = unit
-        self.isCore = isCore
-    }
-}
-
 @Model
 final class Food {
     @Attribute(.unique) var id: UUID
@@ -122,18 +84,5 @@ final class Food {
         let parts = [name, brand, commonName].compactMap { $0 } + searchAliases
         searchIndex = parts.joined(separator: " ")
             .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: nil)
-    }
-}
-
-@Model
-final class FoodNutrientValue {
-    var amount: Double        // in `nutrient.unit`, per `food.nutrientReferenceAmount`
-    var food: Food?
-    var nutrient: Nutrient?
-
-    init(amount: Double, food: Food? = nil, nutrient: Nutrient? = nil) {
-        self.amount = amount
-        self.food = food
-        self.nutrient = nutrient
     }
 }

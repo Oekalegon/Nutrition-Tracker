@@ -1,12 +1,5 @@
 import Foundation
 
-enum UnitDimension: String, Codable {
-    case mass
-    case volume
-    case energy
-    case count      // "1 piece", "1 banana", "1 slice"
-}
-
 enum MeasurementUnit: String, Codable, CaseIterable {
     // Mass
     case microgram, milligram, gram, kilogram
@@ -67,12 +60,4 @@ enum MeasurementUnit: String, Codable, CaseIterable {
         case .piece: return "stk"
         }
     }
-}
-
-struct Measure: Codable, Hashable {
-    var value: Double
-    var unit: MeasurementUnit
-
-    /// Value expressed in the dimension's base unit (g / ml / kcal / count).
-    var baseValue: Double { value * unit.baseUnitFactor }
 }
