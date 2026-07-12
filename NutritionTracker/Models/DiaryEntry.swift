@@ -1,16 +1,6 @@
 import Foundation
 import SwiftData
 
-enum MealSlot: String, Codable, CaseIterable {
-    case breakfast, lunch, dinner, snack
-}
-
-enum DiarySourceType: String, Codable {
-    case freeEntry   // ad-hoc item(s), not tied to a saved Meal/Recipe
-    case meal
-    case recipe
-}
-
 @Model
 final class DiaryEntry {
     @Attribute(.unique) var id: UUID
@@ -42,34 +32,5 @@ final class DiaryEntry {
         self.sourceType = sourceType
         self.label = label
         self.rawInputText = rawInputText
-    }
-}
-
-@Model
-final class DiaryItem {
-    var quantity: Measure       // as logged, e.g. Measure(1, .piece) or Measure(150, .gram)
-    var food: Food?
-    var entry: DiaryEntry?
-
-    @Relationship(deleteRule: .cascade, inverse: \DiaryItemNutrientValue.item)
-    var nutrientSnapshot: [DiaryItemNutrientValue] = []
-
-    init(quantity: Measure, food: Food? = nil, entry: DiaryEntry? = nil) {
-        self.quantity = quantity
-        self.food = food
-        self.entry = entry
-    }
-}
-
-@Model
-final class DiaryItemNutrientValue {
-    var nutrientCode: String        // denormalized (not a relationship) — survives Nutrient catalog edits
-    var quantity: Measure
-    var item: DiaryItem?
-
-    init(nutrientCode: String, quantity: Measure, item: DiaryItem? = nil) {
-        self.nutrientCode = nutrientCode
-        self.quantity = quantity
-        self.item = item
     }
 }
