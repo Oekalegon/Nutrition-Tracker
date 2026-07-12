@@ -13,6 +13,7 @@
 		0A24DBC66595305BD6E634FA /* DailySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A7319AFFF8430BAD8CF12 /* DailySummary.swift */; };
 		12E9916B2BD9BEAF5E2ECC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBB130E0322EE0793EA4D2 /* ContentView.swift */; };
 		14780B5D99479E93C0AE29BB /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A1410F74103D7D1EE7195 /* RecipeIngredient.swift */; };
+		1DDFF5044A27AAEAACC74E53 /* NutrientSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0816CB6FE6F33DC92C4FC29E /* NutrientSeeder.swift */; };
 		4208BE8B68DDAEDF00319C07 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1C8FC02CC605BBF92D978 /* WeightEntry.swift */; };
 		42D7AA2D3291FF921D0EBE56 /* WeightGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869A3FCF6229248A32E49B5 /* WeightGoal.swift */; };
 		441991DFE15F83CA686EFE18 /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA18E3F95D4EA3336474BB7 /* Nutrient.swift */; };
@@ -37,6 +38,7 @@
 		B3AACE4EA008CAB087A0A4F5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0CC2CD4B0519007C48D92 /* Recipe.swift */; };
 		B9FB5F9445D81F7FB202C303 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CEEFCA540E5BBC90572C6 /* Measure.swift */; };
 		C40CF5D9DB1D625BFFDA2A62 /* MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC034CD457C5913E6ED82CB7 /* MeasurementUnit.swift */; };
+		C5CD08CE87AD2D1C25450F4F /* NutrientSeederTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BA51E4DD619B6DBEAB1B45 /* NutrientSeederTests.swift */; };
 		C690A06CD68B2220FC0F1416 /* MealSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CACDF03B6CC78519899F2 /* MealSlot.swift */; };
 		C6FA6A26B28F80536E655F19 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245CCE6207CBD45E2B370DF /* DiaryView.swift */; };
 		D339C2EC692EDBC8C5666355 /* WeightSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C383F85389FE515AA767 /* WeightSource.swift */; };
@@ -57,6 +59,7 @@
 /* Begin PBXFileReference section */
 		022A7319AFFF8430BAD8CF12 /* DailySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummary.swift; sourceTree = "<group>"; };
 		077CACDF03B6CC78519899F2 /* MealSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSlot.swift; sourceTree = "<group>"; };
+		0816CB6FE6F33DC92C4FC29E /* NutrientSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientSeeder.swift; sourceTree = "<group>"; };
 		0C74AED107835BD171A70436 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		1F765544A90D979DB3AB1AAA /* TargetSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSource.swift; sourceTree = "<group>"; };
 		27FA46A79700F1370DB579CF /* FoodGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroup.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		57941D39CAEA72DB232C7184 /* DiarySourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySourceType.swift; sourceTree = "<group>"; };
 		5A4CEEFCA540E5BBC90572C6 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		6245CCE6207CBD45E2B370DF /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		64BA51E4DD619B6DBEAB1B45 /* NutrientSeederTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientSeederTests.swift; sourceTree = "<group>"; };
 		6C7E3F2829C4AB8A4ECE093F /* NutritionTrackerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NutritionTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7AA608AE3DB77EF7E67CF2 /* FoodNutrientValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrientValue.swift; sourceTree = "<group>"; };
 		6F3A1410F74103D7D1EE7195 /* RecipeIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				A8C82B42B95E8EB3AB5D8D48 /* Assets.xcassets */,
 				0E60020F7A4DAF0B74282E95 /* App */,
 				408DE7FF7301EB7B8D826CC4 /* Models */,
+				E5258E9619AECDC10638058F /* Services */,
 				5FD5D1BBDA48F229EF3F5190 /* Views */,
 			);
 			path = NutritionTracker;
@@ -172,6 +177,7 @@
 		61BD62D6947FC2C07A208B7E /* NutritionTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				64BA51E4DD619B6DBEAB1B45 /* NutrientSeederTests.swift */,
 				FB3208230A3221A5B1A978C3 /* NutritionTrackerTests.swift */,
 			);
 			path = NutritionTrackerTests;
@@ -184,6 +190,14 @@
 				61BD62D6947FC2C07A208B7E /* NutritionTrackerTests */,
 				0BA984996364C588FE757564 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		E5258E9619AECDC10638058F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0816CB6FE6F33DC92C4FC29E /* NutrientSeeder.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +305,7 @@
 				B9FB5F9445D81F7FB202C303 /* Measure.swift in Sources */,
 				C40CF5D9DB1D625BFFDA2A62 /* MeasurementUnit.swift in Sources */,
 				441991DFE15F83CA686EFE18 /* Nutrient.swift in Sources */,
+				1DDFF5044A27AAEAACC74E53 /* NutrientSeeder.swift in Sources */,
 				4BCF623E8765F30A439CE1FD /* NutritionTarget.swift in Sources */,
 				8A2C9541CCAE959B6B21AEF9 /* NutritionTrackerApp.swift in Sources */,
 				78950FC46FA7237F6D85459C /* NutritionTrackerMigrationPlan.swift in Sources */,
@@ -312,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CD08CE87AD2D1C25450F4F /* NutrientSeederTests.swift in Sources */,
 				09FCC5694DD9FD62F293B4DC /* NutritionTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
