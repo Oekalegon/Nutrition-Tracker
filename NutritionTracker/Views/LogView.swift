@@ -20,6 +20,9 @@ struct LogView: View {
                     .focused($isInputFocused)
                     .padding()
             }
+            // Screen-wide dismiss-on-tap — safe while this VStack only holds the placeholder
+            // and text field. Once NUTR-20 replaces the placeholder with real tappable content
+            // (search results, suggestion chips), re-verify this doesn't race child gestures.
             .contentShape(Rectangle())
             .onTapGesture { isInputFocused = false }
             .navigationTitle("Log")
