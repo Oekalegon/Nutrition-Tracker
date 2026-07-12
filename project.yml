@@ -4,6 +4,15 @@ options:
   deploymentTarget:
     iOS: "18.0"
   createIntermediateGroups: true
+
+# Shared.xcconfig is committed and always present (required — CI and
+# fresh clones have no Local.xcconfig); it optionally includes the
+# gitignored Config/Local.xcconfig for personal signing overrides (e.g.
+# DEVELOPMENT_TEAM) — see Config/Local.xcconfig.example.
+configFiles:
+  Debug: Config/Shared.xcconfig
+  Release: Config/Shared.xcconfig
+
 settings:
   base:
     SWIFT_VERSION: "6.0"

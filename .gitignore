@@ -5,6 +5,9 @@
 ## User settings
 xcuserdata/
 
+## Local signing overrides (see Config/Local.xcconfig.example)
+Config/Local.xcconfig
+
 ## Obj-C/Swift specific
 *.hmap
 
