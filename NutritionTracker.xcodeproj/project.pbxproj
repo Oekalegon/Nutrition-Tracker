@@ -8,24 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		0562E69B5728533B5DEEEDC0 /* TargetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82829DDCDF7D336164DA7613 /* TargetStatus.swift */; };
+		05C4AFA658CDC8D7FE8ABBF5 /* MatvaretabellenClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130EED0B8DD143062BD28F2F /* MatvaretabellenClient.swift */; };
 		09FCC5694DD9FD62F293B4DC /* NutritionTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3208230A3221A5B1A978C3 /* NutritionTrackerTests.swift */; };
 		0A17172CE70AA23B3CB166E0 /* MealIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F00AD0D6311CA973FAA9E1 /* MealIngredient.swift */; };
 		0A24DBC66595305BD6E634FA /* DailySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A7319AFFF8430BAD8CF12 /* DailySummary.swift */; };
+		0CC1F11EC5D9097A58DB6396 /* MatvaretabellenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842E72FCF2C0532103EBB63 /* MatvaretabellenValue.swift */; };
 		12E9916B2BD9BEAF5E2ECC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBB130E0322EE0793EA4D2 /* ContentView.swift */; };
 		14780B5D99479E93C0AE29BB /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A1410F74103D7D1EE7195 /* RecipeIngredient.swift */; };
+		1B8EBEF8B951A11EA3FCADEB /* MatvaretabellenTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4158E4C666A9E4ED61637C31 /* MatvaretabellenTransport.swift */; };
+		262E13BFC6DA8554E439D583 /* MatvaretabellenNutrientsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331082263387204401A4610 /* MatvaretabellenNutrientsResponse.swift */; };
+		3B18708B674C46AD9A5075B7 /* MatvaretabellenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59474BEAF39D68CCD8DADE81 /* MatvaretabellenFood.swift */; };
 		4208BE8B68DDAEDF00319C07 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1C8FC02CC605BBF92D978 /* WeightEntry.swift */; };
 		42D7AA2D3291FF921D0EBE56 /* WeightGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869A3FCF6229248A32E49B5 /* WeightGoal.swift */; };
+		4327B44A79BF25833CE79239 /* MatvaretabellenPortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06155D6751FB79BA0142D4F3 /* MatvaretabellenPortion.swift */; };
 		441991DFE15F83CA686EFE18 /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA18E3F95D4EA3336474BB7 /* Nutrient.swift */; };
 		4BCF623E8765F30A439CE1FD /* NutritionTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B103547D09AC597A0555F7 /* NutritionTarget.swift */; };
+		4FAD4DAD92DD315528E2ABAC /* URLSessionMatvaretabellenTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850B083AEFAA9C3BF2554AE3 /* URLSessionMatvaretabellenTransport.swift */; };
+		5333EF42A660BF19792C35EC /* MatvaretabellenLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E37A5353DF43F9F475F1B3 /* MatvaretabellenLocale.swift */; };
+		53A781315CCA7778292D0964 /* MatvaretabellenFoodGroupsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EAEE6E2EAC7643D91593BB /* MatvaretabellenFoodGroupsResponse.swift */; };
+		6703D3B4612D2270883ECDC4 /* MatvaretabellenFoodGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC16A7A2EF7D4245ED70D709 /* MatvaretabellenFoodGroup.swift */; };
 		69B0316FE4ACCA8AF76E3A73 /* FoodNutrientValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7AA608AE3DB77EF7E67CF2 /* FoodNutrientValue.swift */; };
 		6C5A296D630E8700D5A6AC9C /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F8C785686C520A5FD68FD5 /* LogView.swift */; };
+		7610502151BE5285510D7B1C /* MatvaretabellenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAD6CD46D9DDC921636F8E0 /* MatvaretabellenSource.swift */; };
 		77FFCD8EEC3F9E7902818CDC /* FoodSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB925A125544B024DE8807A3 /* FoodSource.swift */; };
 		7828AB95AD2CB5C50F275A8D /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC3668B3A6A79667C8F3C6 /* DiaryEntry.swift */; };
 		78950FC46FA7237F6D85459C /* NutritionTrackerMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57CB89EA5368C99B632971 /* NutritionTrackerMigrationPlan.swift */; };
 		89D4431B32C600419BBCA6AC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5BD5CE58FC7BF8DF30347 /* SettingsView.swift */; };
 		8A2C9541CCAE959B6B21AEF9 /* NutritionTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE8D58B22E9542EA603174 /* NutritionTrackerApp.swift */; };
 		8EACBBDCAD434F7707634367 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52275EACD932580151E8A8FF /* Food.swift */; };
+		91458B4D72313E21189ECEF1 /* MatvaretabellenSourcesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D58ACF7F808F6417A903592 /* MatvaretabellenSourcesResponse.swift */; };
 		924F365862E333F2F86C1283 /* DiarySourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57941D39CAEA72DB232C7184 /* DiarySourceType.swift */; };
+		9596107B5ECA7C6C50BC736C /* MatvaretabellenFoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25919466E3A38D71726A7605 /* MatvaretabellenFoodsResponse.swift */; };
 		9C762F55963965B14FDA0CC9 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD762875483EA1A295FC556A /* StatsView.swift */; };
 		9CA7EED2C3B8E5745AFE8E1B /* NutritionTrackerSchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C491630F123558866E2392 /* NutritionTrackerSchemaV1.swift */; };
 		9F56A06A0A30BB0D02C160AF /* DiaryItemNutrientValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC40031902838BA9C2E865 /* DiaryItemNutrientValue.swift */; };
@@ -36,12 +49,18 @@
 		AF6A81AA131DBFAB22252A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C82B42B95E8EB3AB5D8D48 /* Assets.xcassets */; };
 		B3AACE4EA008CAB087A0A4F5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0CC2CD4B0519007C48D92 /* Recipe.swift */; };
 		B9FB5F9445D81F7FB202C303 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CEEFCA540E5BBC90572C6 /* Measure.swift */; };
+		BF764FBE80C7FDBE6A93ABA4 /* MatvaretabellenClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47FB389B012D566326BE02 /* MatvaretabellenClientTests.swift */; };
 		C40CF5D9DB1D625BFFDA2A62 /* MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC034CD457C5913E6ED82CB7 /* MeasurementUnit.swift */; };
 		C690A06CD68B2220FC0F1416 /* MealSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CACDF03B6CC78519899F2 /* MealSlot.swift */; };
 		C6FA6A26B28F80536E655F19 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245CCE6207CBD45E2B370DF /* DiaryView.swift */; };
 		D339C2EC692EDBC8C5666355 /* WeightSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C383F85389FE515AA767 /* WeightSource.swift */; };
 		E54422D467C43A4CCDCF4D04 /* FoodGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA46A79700F1370DB579CF /* FoodGroup.swift */; };
+		EA95DA33CD1C117E65A0EBAC /* MatvaretabellenClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990BB05F9075103639D5825 /* MatvaretabellenClientError.swift */; };
+		EB5666FAD53BB442D1CDE5CD /* MatvaretabellenNutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2497C9B18256F97EF9352D2 /* MatvaretabellenNutrient.swift */; };
 		EC812726947B9A580D560B16 /* TargetSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F765544A90D979DB3AB1AAA /* TargetSource.swift */; };
+		F370DDE93FF58D2625DADB80 /* MatvaretabellenEdiblePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA91EF6EA09345AFEA474FEA /* MatvaretabellenEdiblePart.swift */; };
+		F864D57F257458D57805F5B5 /* MatvaretabellenConstituent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3604865D4AD8BA95EAC465D /* MatvaretabellenConstituent.swift */; };
+		FCC64AB57D533CA20EEE5A7E /* FakeMatvaretabellenTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F33D0DBF14A4B680010F5 /* FakeMatvaretabellenTransport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +75,15 @@
 
 /* Begin PBXFileReference section */
 		022A7319AFFF8430BAD8CF12 /* DailySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummary.swift; sourceTree = "<group>"; };
+		06155D6751FB79BA0142D4F3 /* MatvaretabellenPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenPortion.swift; sourceTree = "<group>"; };
 		077CACDF03B6CC78519899F2 /* MealSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSlot.swift; sourceTree = "<group>"; };
+		0AAD6CD46D9DDC921636F8E0 /* MatvaretabellenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenSource.swift; sourceTree = "<group>"; };
 		0C74AED107835BD171A70436 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		130EED0B8DD143062BD28F2F /* MatvaretabellenClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenClient.swift; sourceTree = "<group>"; };
+		1B47FB389B012D566326BE02 /* MatvaretabellenClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenClientTests.swift; sourceTree = "<group>"; };
+		1D58ACF7F808F6417A903592 /* MatvaretabellenSourcesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenSourcesResponse.swift; sourceTree = "<group>"; };
 		1F765544A90D979DB3AB1AAA /* TargetSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSource.swift; sourceTree = "<group>"; };
+		25919466E3A38D71726A7605 /* MatvaretabellenFoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenFoodsResponse.swift; sourceTree = "<group>"; };
 		27FA46A79700F1370DB579CF /* FoodGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroup.swift; sourceTree = "<group>"; };
 		2AEC40031902838BA9C2E865 /* DiaryItemNutrientValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItemNutrientValue.swift; sourceTree = "<group>"; };
 		31B103547D09AC597A0555F7 /* NutritionTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTarget.swift; sourceTree = "<group>"; };
@@ -66,31 +91,44 @@
 		33C491630F123558866E2392 /* NutritionTrackerSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTrackerSchemaV1.swift; sourceTree = "<group>"; };
 		3B105546DD625EB8D43DE944 /* DailyNutrientTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNutrientTotal.swift; sourceTree = "<group>"; };
 		3E57CB89EA5368C99B632971 /* NutritionTrackerMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTrackerMigrationPlan.swift; sourceTree = "<group>"; };
+		4158E4C666A9E4ED61637C31 /* MatvaretabellenTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenTransport.swift; sourceTree = "<group>"; };
+		45E37A5353DF43F9F475F1B3 /* MatvaretabellenLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenLocale.swift; sourceTree = "<group>"; };
 		4FA18E3F95D4EA3336474BB7 /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
 		52275EACD932580151E8A8FF /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		57941D39CAEA72DB232C7184 /* DiarySourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySourceType.swift; sourceTree = "<group>"; };
+		59474BEAF39D68CCD8DADE81 /* MatvaretabellenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenFood.swift; sourceTree = "<group>"; };
 		5A4CEEFCA540E5BBC90572C6 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		6245CCE6207CBD45E2B370DF /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
-		6C7E3F2829C4AB8A4ECE093F /* NutritionTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7E3F2829C4AB8A4ECE093F /* NutritionTrackerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NutritionTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7AA608AE3DB77EF7E67CF2 /* FoodNutrientValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrientValue.swift; sourceTree = "<group>"; };
 		6F3A1410F74103D7D1EE7195 /* RecipeIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
 		7869A3FCF6229248A32E49B5 /* WeightGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightGoal.swift; sourceTree = "<group>"; };
 		7969943D6DFE5FC9B9B69A40 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		79D3C383F85389FE515AA767 /* WeightSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSource.swift; sourceTree = "<group>"; };
+		7B7F33D0DBF14A4B680010F5 /* FakeMatvaretabellenTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMatvaretabellenTransport.swift; sourceTree = "<group>"; };
 		82829DDCDF7D336164DA7613 /* TargetStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatus.swift; sourceTree = "<group>"; };
 		83F00AD0D6311CA973FAA9E1 /* MealIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIngredient.swift; sourceTree = "<group>"; };
+		850B083AEFAA9C3BF2554AE3 /* URLSessionMatvaretabellenTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMatvaretabellenTransport.swift; sourceTree = "<group>"; };
 		88C1C8FC02CC605BBF92D978 /* WeightEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
 		90B0CC2CD4B0519007C48D92 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		9842E72FCF2C0532103EBB63 /* MatvaretabellenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenValue.swift; sourceTree = "<group>"; };
+		A3604865D4AD8BA95EAC465D /* MatvaretabellenConstituent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenConstituent.swift; sourceTree = "<group>"; };
 		A8C82B42B95E8EB3AB5D8D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AED5BD5CE58FC7BF8DF30347 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B331082263387204401A4610 /* MatvaretabellenNutrientsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenNutrientsResponse.swift; sourceTree = "<group>"; };
 		B8F8C785686C520A5FD68FD5 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		B990BB05F9075103639D5825 /* MatvaretabellenClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenClientError.swift; sourceTree = "<group>"; };
+		BA91EF6EA09345AFEA474FEA /* MatvaretabellenEdiblePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenEdiblePart.swift; sourceTree = "<group>"; };
 		BABBB130E0322EE0793EA4D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC034CD457C5913E6ED82CB7 /* MeasurementUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementUnit.swift; sourceTree = "<group>"; };
 		BD762875483EA1A295FC556A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		CB925A125544B024DE8807A3 /* FoodSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSource.swift; sourceTree = "<group>"; };
+		CC16A7A2EF7D4245ED70D709 /* MatvaretabellenFoodGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenFoodGroup.swift; sourceTree = "<group>"; };
+		D2497C9B18256F97EF9352D2 /* MatvaretabellenNutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenNutrient.swift; sourceTree = "<group>"; };
+		E0EAEE6E2EAC7643D91593BB /* MatvaretabellenFoodGroupsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenFoodGroupsResponse.swift; sourceTree = "<group>"; };
 		EBD3F258837692C877C135C6 /* UnitDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDimension.swift; sourceTree = "<group>"; };
 		EBEC3668B3A6A79667C8F3C6 /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
-		F7A7778041A35A7C6ECBF099 /* NutritionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A7778041A35A7C6ECBF099 /* NutritionTracker.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = NutritionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5E86F9113EDF4902D74B25 /* DiaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItem.swift; sourceTree = "<group>"; };
 		FB3208230A3221A5B1A978C3 /* NutritionTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTrackerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +157,7 @@
 				A8C82B42B95E8EB3AB5D8D48 /* Assets.xcassets */,
 				0E60020F7A4DAF0B74282E95 /* App */,
 				408DE7FF7301EB7B8D826CC4 /* Models */,
+				E5258E9619AECDC10638058F /* Services */,
 				5FD5D1BBDA48F229EF3F5190 /* Views */,
 			);
 			path = NutritionTracker;
@@ -158,6 +197,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5529A589152F0D5471B0A599 /* Matvaretabellen */ = {
+			isa = PBXGroup;
+			children = (
+				130EED0B8DD143062BD28F2F /* MatvaretabellenClient.swift */,
+				B990BB05F9075103639D5825 /* MatvaretabellenClientError.swift */,
+				A3604865D4AD8BA95EAC465D /* MatvaretabellenConstituent.swift */,
+				BA91EF6EA09345AFEA474FEA /* MatvaretabellenEdiblePart.swift */,
+				59474BEAF39D68CCD8DADE81 /* MatvaretabellenFood.swift */,
+				CC16A7A2EF7D4245ED70D709 /* MatvaretabellenFoodGroup.swift */,
+				E0EAEE6E2EAC7643D91593BB /* MatvaretabellenFoodGroupsResponse.swift */,
+				25919466E3A38D71726A7605 /* MatvaretabellenFoodsResponse.swift */,
+				45E37A5353DF43F9F475F1B3 /* MatvaretabellenLocale.swift */,
+				D2497C9B18256F97EF9352D2 /* MatvaretabellenNutrient.swift */,
+				B331082263387204401A4610 /* MatvaretabellenNutrientsResponse.swift */,
+				06155D6751FB79BA0142D4F3 /* MatvaretabellenPortion.swift */,
+				0AAD6CD46D9DDC921636F8E0 /* MatvaretabellenSource.swift */,
+				1D58ACF7F808F6417A903592 /* MatvaretabellenSourcesResponse.swift */,
+				4158E4C666A9E4ED61637C31 /* MatvaretabellenTransport.swift */,
+				9842E72FCF2C0532103EBB63 /* MatvaretabellenValue.swift */,
+				850B083AEFAA9C3BF2554AE3 /* URLSessionMatvaretabellenTransport.swift */,
+			);
+			path = Matvaretabellen;
+			sourceTree = "<group>";
+		};
 		5FD5D1BBDA48F229EF3F5190 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +236,8 @@
 		61BD62D6947FC2C07A208B7E /* NutritionTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B7F33D0DBF14A4B680010F5 /* FakeMatvaretabellenTransport.swift */,
+				1B47FB389B012D566326BE02 /* MatvaretabellenClientTests.swift */,
 				FB3208230A3221A5B1A978C3 /* NutritionTrackerTests.swift */,
 			);
 			path = NutritionTrackerTests;
@@ -186,6 +251,14 @@
 				61BD62D6947FC2C07A208B7E /* NutritionTrackerTests */,
 				0BA984996364C588FE757564 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		E5258E9619AECDC10638058F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5529A589152F0D5471B0A599 /* Matvaretabellen */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		FF4A2BFB52F3CB16F326C7B7 /* Config */ = {
@@ -243,6 +316,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 5410DFDAE310878691ECC5A5 /* Build configuration list for PBXProject "NutritionTracker" */;
 			developmentRegion = en;
@@ -293,6 +368,22 @@
 				69B0316FE4ACCA8AF76E3A73 /* FoodNutrientValue.swift in Sources */,
 				77FFCD8EEC3F9E7902818CDC /* FoodSource.swift in Sources */,
 				6C5A296D630E8700D5A6AC9C /* LogView.swift in Sources */,
+				05C4AFA658CDC8D7FE8ABBF5 /* MatvaretabellenClient.swift in Sources */,
+				EA95DA33CD1C117E65A0EBAC /* MatvaretabellenClientError.swift in Sources */,
+				F864D57F257458D57805F5B5 /* MatvaretabellenConstituent.swift in Sources */,
+				F370DDE93FF58D2625DADB80 /* MatvaretabellenEdiblePart.swift in Sources */,
+				3B18708B674C46AD9A5075B7 /* MatvaretabellenFood.swift in Sources */,
+				6703D3B4612D2270883ECDC4 /* MatvaretabellenFoodGroup.swift in Sources */,
+				53A781315CCA7778292D0964 /* MatvaretabellenFoodGroupsResponse.swift in Sources */,
+				9596107B5ECA7C6C50BC736C /* MatvaretabellenFoodsResponse.swift in Sources */,
+				5333EF42A660BF19792C35EC /* MatvaretabellenLocale.swift in Sources */,
+				EB5666FAD53BB442D1CDE5CD /* MatvaretabellenNutrient.swift in Sources */,
+				262E13BFC6DA8554E439D583 /* MatvaretabellenNutrientsResponse.swift in Sources */,
+				4327B44A79BF25833CE79239 /* MatvaretabellenPortion.swift in Sources */,
+				7610502151BE5285510D7B1C /* MatvaretabellenSource.swift in Sources */,
+				91458B4D72313E21189ECEF1 /* MatvaretabellenSourcesResponse.swift in Sources */,
+				1B8EBEF8B951A11EA3FCADEB /* MatvaretabellenTransport.swift in Sources */,
+				0CC1F11EC5D9097A58DB6396 /* MatvaretabellenValue.swift in Sources */,
 				A4ED3611A58372E01C899D7D /* Meal.swift in Sources */,
 				0A17172CE70AA23B3CB166E0 /* MealIngredient.swift in Sources */,
 				C690A06CD68B2220FC0F1416 /* MealSlot.swift in Sources */,
@@ -309,6 +400,7 @@
 				9C762F55963965B14FDA0CC9 /* StatsView.swift in Sources */,
 				EC812726947B9A580D560B16 /* TargetSource.swift in Sources */,
 				0562E69B5728533B5DEEEDC0 /* TargetStatus.swift in Sources */,
+				4FAD4DAD92DD315528E2ABAC /* URLSessionMatvaretabellenTransport.swift in Sources */,
 				A4470942F76E391140C13117 /* UnitDimension.swift in Sources */,
 				4208BE8B68DDAEDF00319C07 /* WeightEntry.swift in Sources */,
 				42D7AA2D3291FF921D0EBE56 /* WeightGoal.swift in Sources */,
@@ -320,6 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC64AB57D533CA20EEE5A7E /* FakeMatvaretabellenTransport.swift in Sources */,
+				BF764FBE80C7FDBE6A93ABA4 /* MatvaretabellenClientTests.swift in Sources */,
 				09FCC5694DD9FD62F293B4DC /* NutritionTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +434,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = WTT2LZ6DDG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -360,7 +453,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = WTT2LZ6DDG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
