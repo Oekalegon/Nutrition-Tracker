@@ -1,5 +1,8 @@
 import SwiftUI
 import SwiftData
+import OSLog
+
+private let logger = Logger(subsystem: "com.donwillems.NutritionTracker", category: "Seeding")
 
 @main
 struct NutritionTrackerApp: App {
@@ -16,6 +19,14 @@ struct NutritionTrackerApp: App {
             fatalError("Failed to create ModelContainer: \(error)")
         }
     }()
+
+    init() {
+        do {
+            try NutrientSeeder.seedCoreNutrientsIfNeeded(in: modelContainer.mainContext)
+        } catch {
+            logger.error("Failed to seed core nutrient catalog: \(error)")
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
