@@ -15,19 +15,16 @@ struct LogView: View {
                     description: Text("Type what you ate, e.g. \u{201C}one banana\u{201D}.")
                 )
                 Spacer()
-                TextField("What did you eat?", text: $inputText, axis: .vertical)
-                    .textFieldStyle(.roundedBorder)
-                    .focused($isInputFocused)
-                    .padding()
-                    // Attached directly to the field, not the containing VStack — a
-                    // multi-line (axis: .vertical) TextField unreliably forwards its
-                    // input accessory view when the toolbar is attached higher up.
-                    .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Spacer()
-                            Button("Done") { isInputFocused = false }
-                        }
+                HStack {
+                    TextField("What did you eat?", text: $inputText, axis: .vertical)
+                        .textFieldStyle(.roundedBorder)
+                        .focused($isInputFocused)
+
+                    if isInputFocused {
+                        Button("Done") { isInputFocused = false }
                     }
+                }
+                .padding()
             }
             // Screen-wide dismiss-on-tap — safe while this VStack only holds the placeholder
             // and text field. Once NUTR-20 replaces the placeholder with real tappable content
