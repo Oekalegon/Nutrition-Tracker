@@ -1,0 +1,7 @@
+// Copy this file to Local.xcconfig (gitignored) and fill in your own
+// Apple Developer Team ID to run on a physical device or let Xcode
+// automatically manage signing. Not needed for Simulator-only builds.
+//
+// Find your Team ID at https://developer.apple.com/account/#/membership
+
+DEVELOPMENT_TEAM =

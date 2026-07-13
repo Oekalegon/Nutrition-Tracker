@@ -1,0 +1,5 @@
+// Committed, always present (unlike Local.xcconfig, which is gitignored)
+// so CI and fresh clones always have a config file to reference. The `?`
+// makes the include optional — no error when Local.xcconfig is absent.
+
+#include? "Local.xcconfig"
