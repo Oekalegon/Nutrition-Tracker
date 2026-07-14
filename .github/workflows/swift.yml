@@ -52,4 +52,10 @@ jobs:
       run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
 
     - name: Run tests
-      run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      # -parallel-testing-enabled NO: even with the simulator already booted,
+      # the test host still crashed ("Test crashed with signal trap while
+      # preparing to run tests" / "operation never finished bootstrapping") on
+      # this runner — a commonly-reported issue tied to Xcode spawning
+      # multiple concurrent test-host processes on resource-constrained CI.
+      # Serialize test execution to avoid that.
+      run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" -parallel-testing-enabled NO test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
