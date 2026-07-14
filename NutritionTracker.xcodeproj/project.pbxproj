@@ -16,6 +16,7 @@
 		12E9916B2BD9BEAF5E2ECC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBB130E0322EE0793EA4D2 /* ContentView.swift */; };
 		14780B5D99479E93C0AE29BB /* RecipeIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A1410F74103D7D1EE7195 /* RecipeIngredient.swift */; };
 		1B8EBEF8B951A11EA3FCADEB /* MatvaretabellenTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4158E4C666A9E4ED61637C31 /* MatvaretabellenTransport.swift */; };
+		1DDFF5044A27AAEAACC74E53 /* NutrientSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0816CB6FE6F33DC92C4FC29E /* NutrientSeeder.swift */; };
 		262E13BFC6DA8554E439D583 /* MatvaretabellenNutrientsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331082263387204401A4610 /* MatvaretabellenNutrientsResponse.swift */; };
 		3B18708B674C46AD9A5075B7 /* MatvaretabellenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59474BEAF39D68CCD8DADE81 /* MatvaretabellenFood.swift */; };
 		4208BE8B68DDAEDF00319C07 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1C8FC02CC605BBF92D978 /* WeightEntry.swift */; };
@@ -51,6 +52,7 @@
 		B9FB5F9445D81F7FB202C303 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CEEFCA540E5BBC90572C6 /* Measure.swift */; };
 		BF764FBE80C7FDBE6A93ABA4 /* MatvaretabellenClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47FB389B012D566326BE02 /* MatvaretabellenClientTests.swift */; };
 		C40CF5D9DB1D625BFFDA2A62 /* MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC034CD457C5913E6ED82CB7 /* MeasurementUnit.swift */; };
+		C5CD08CE87AD2D1C25450F4F /* NutrientSeederTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BA51E4DD619B6DBEAB1B45 /* NutrientSeederTests.swift */; };
 		C690A06CD68B2220FC0F1416 /* MealSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CACDF03B6CC78519899F2 /* MealSlot.swift */; };
 		C6FA6A26B28F80536E655F19 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245CCE6207CBD45E2B370DF /* DiaryView.swift */; };
 		D339C2EC692EDBC8C5666355 /* WeightSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C383F85389FE515AA767 /* WeightSource.swift */; };
@@ -77,6 +79,7 @@
 		022A7319AFFF8430BAD8CF12 /* DailySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummary.swift; sourceTree = "<group>"; };
 		06155D6751FB79BA0142D4F3 /* MatvaretabellenPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenPortion.swift; sourceTree = "<group>"; };
 		077CACDF03B6CC78519899F2 /* MealSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSlot.swift; sourceTree = "<group>"; };
+		0816CB6FE6F33DC92C4FC29E /* NutrientSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientSeeder.swift; sourceTree = "<group>"; };
 		0AAD6CD46D9DDC921636F8E0 /* MatvaretabellenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenSource.swift; sourceTree = "<group>"; };
 		0C74AED107835BD171A70436 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		130EED0B8DD143062BD28F2F /* MatvaretabellenClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenClient.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		59474BEAF39D68CCD8DADE81 /* MatvaretabellenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatvaretabellenFood.swift; sourceTree = "<group>"; };
 		5A4CEEFCA540E5BBC90572C6 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		6245CCE6207CBD45E2B370DF /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		64BA51E4DD619B6DBEAB1B45 /* NutrientSeederTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientSeederTests.swift; sourceTree = "<group>"; };
 		6C7E3F2829C4AB8A4ECE093F /* NutritionTrackerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NutritionTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7AA608AE3DB77EF7E67CF2 /* FoodNutrientValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrientValue.swift; sourceTree = "<group>"; };
 		6F3A1410F74103D7D1EE7195 /* RecipeIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredient.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 			children = (
 				7B7F33D0DBF14A4B680010F5 /* FakeMatvaretabellenTransport.swift */,
 				1B47FB389B012D566326BE02 /* MatvaretabellenClientTests.swift */,
+				64BA51E4DD619B6DBEAB1B45 /* NutrientSeederTests.swift */,
 				FB3208230A3221A5B1A978C3 /* NutritionTrackerTests.swift */,
 			);
 			path = NutritionTrackerTests;
@@ -256,6 +261,7 @@
 		E5258E9619AECDC10638058F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0816CB6FE6F33DC92C4FC29E /* NutrientSeeder.swift */,
 				5529A589152F0D5471B0A599 /* Matvaretabellen */,
 			);
 			path = Services;
@@ -390,6 +396,7 @@
 				B9FB5F9445D81F7FB202C303 /* Measure.swift in Sources */,
 				C40CF5D9DB1D625BFFDA2A62 /* MeasurementUnit.swift in Sources */,
 				441991DFE15F83CA686EFE18 /* Nutrient.swift in Sources */,
+				1DDFF5044A27AAEAACC74E53 /* NutrientSeeder.swift in Sources */,
 				4BCF623E8765F30A439CE1FD /* NutritionTarget.swift in Sources */,
 				8A2C9541CCAE959B6B21AEF9 /* NutritionTrackerApp.swift in Sources */,
 				78950FC46FA7237F6D85459C /* NutritionTrackerMigrationPlan.swift in Sources */,
@@ -414,6 +421,7 @@
 			files = (
 				FCC64AB57D533CA20EEE5A7E /* FakeMatvaretabellenTransport.swift in Sources */,
 				BF764FBE80C7FDBE6A93ABA4 /* MatvaretabellenClientTests.swift in Sources */,
+				C5CD08CE87AD2D1C25450F4F /* NutrientSeederTests.swift in Sources */,
 				09FCC5694DD9FD62F293B4DC /* NutritionTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
