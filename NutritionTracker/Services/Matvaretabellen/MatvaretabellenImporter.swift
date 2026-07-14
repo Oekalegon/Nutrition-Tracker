@@ -3,15 +3,20 @@ import SwiftData
 
 /// Maps the four Matvaretabellen JSON dumps into the local SwiftData catalog,
 /// writing exclusively through `NutrientCatalogWriter`/`FoodGroupCatalogWriter`/
-/// `FoodCatalogWriter`. A plain actor holding its own `ModelContext` (not the
-/// app's `mainContext`), so importing ~2,100 foods runs off the main actor
-/// without blocking the UI.
+/// `FoodCatalogWriter`. Runs on the main actor against the container's own
+/// `mainContext` — the well-supported SwiftData pattern. A background-safe
+/// version (via `@ModelActor`, or a hand-rolled actor wrapping its own
+/// `ModelContext`) is tempting given ~2,100 foods is real work, but a plain
+/// actor manually owning a `ModelContext` isn't a documented-safe pattern and
+/// caused CI-only hangs/crashes under concurrent test execution that never
+/// reproduced locally — not worth it until that's understood properly.
 ///
 /// This builds and tests the importer as a callable unit only — deciding
 /// *when* it actually runs in the shipped app (first launch? a Settings
 /// "Refresh catalog" action? a background task?) is a deliberate follow-up,
 /// not decided here.
-actor MatvaretabellenImporter {
+@MainActor
+final class MatvaretabellenImporter {
     /// Matvaretabellen nutrientIds that correspond to the app's core macros.
     /// Everything else in the dump is still imported, just with isCore = false.
     private static let coreNutrientIds: Set<String> = ["Protein", "Fett", "Karbo", "Fiber", "Mono+Di", "Na"]
@@ -21,7 +26,7 @@ actor MatvaretabellenImporter {
 
     init(modelContainer: ModelContainer, client: MatvaretabellenClient = MatvaretabellenClient()) {
         self.client = client
-        self.modelContext = ModelContext(modelContainer)
+        self.modelContext = modelContainer.mainContext
     }
 
     /// Assumes `NutrientSeeder.seedCoreNutrientsIfNeeded` has already run against
