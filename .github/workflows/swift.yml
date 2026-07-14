@@ -10,7 +10,7 @@ jobs:
   build:
     name: Build and Test
     runs-on: macos-26
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
     - name: Checkout code
@@ -52,10 +52,19 @@ jobs:
       run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
 
     - name: Run tests
-      # -parallel-testing-enabled NO: even with the simulator already booted,
-      # the test host still crashed ("Test crashed with signal trap while
-      # preparing to run tests" / "operation never finished bootstrapping") on
-      # this runner — a commonly-reported issue tied to Xcode spawning
-      # multiple concurrent test-host processes on resource-constrained CI.
-      # Serialize test execution to avoid that.
-      run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" -parallel-testing-enabled NO test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      # The test host intermittently crashes during Swift Testing's own
+      # bootstrapping on this runner ("Test crashed with signal trap while
+      # preparing to run tests" / "operation never finished bootstrapping"),
+      # before any actual test code runs — reproduced locally too, where the
+      # identical crash resolved itself on Xcode's own automatic retry. A
+      # well-documented class of transient Xcode/Simulator CI flakiness, not
+      # an app or test bug. Retry the whole step rather than chase it further.
+      run: |
+        for attempt in 1 2 3; do
+          echo "Test attempt $attempt"
+          if xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" -parallel-testing-enabled NO test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO; then
+            exit 0
+          fi
+          echo "Attempt $attempt failed"
+        done
+        exit 1
