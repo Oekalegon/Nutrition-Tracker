@@ -21,10 +21,8 @@ jobs:
       run: |
         # Runner images carry multiple iOS runtimes side by side (e.g. 18.0
         # through 26.x). `.devices` keys aren't guaranteed sorted, so picking
-        # blindly can land on an old runtime — iOS 18.2 was observed to crash
-        # during Swift Testing's bootstrapping (a test-runner-launch failure,
-        # not a bug in app/test code), hanging CI for the job's full timeout.
-        # Sort descending and take the newest runtime's first iPhone instead.
+        # blindly can land on an old runtime. Sort descending and take the
+        # newest runtime's first iPhone instead.
         UDID=$(xcrun simctl list devices available -j | jq -r '
           .devices
           | to_entries
@@ -37,6 +35,18 @@ jobs:
         ')
         echo "Selected simulator UDID: $UDID"
         echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+    - name: Boot simulator
+      run: |
+        # `xcodebuild test` booting a cold simulator implicitly races against
+        # the simulator's own services actually being ready — observed on this
+        # runner as the test host repeatedly crashing during Swift Testing's
+        # bootstrapping ("Restarting after unexpected exit, crash, or test
+        # timeout" / "Executed 0 tests", several times in a row, regardless of
+        # which iOS runtime was selected) before xcodebuild eventually gives
+        # up. Boot explicitly and block until fully ready first.
+        xcrun simctl boot "${{ steps.simulator.outputs.udid }}" || true
+        xcrun simctl bootstatus "${{ steps.simulator.outputs.udid }}" -b
 
     - name: Build
       run: xcodebuild -project NutritionTracker.xcodeproj -scheme NutritionTracker -destination "id=${{ steps.simulator.outputs.udid }}" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
